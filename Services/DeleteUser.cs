@@ -7,7 +7,6 @@ namespace Services
 {
     public class DeleteUser
     {
-        
         public void Delete(string userName)
         {
             Database.Users.Remove(userName);

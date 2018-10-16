@@ -9,10 +9,8 @@ namespace MenuShellTerminal.Views
 {
     public class LoginView : View
     {
-        
         public override View ViewIt()
         {
-           
             Console.Clear();
             Console.Title = "Login";
             Console.WriteLine("UserName: ");

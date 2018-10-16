@@ -21,7 +21,6 @@ namespace Services
             {
                 return "User with given UserName already exist";
             }
-
         }
     }
 }

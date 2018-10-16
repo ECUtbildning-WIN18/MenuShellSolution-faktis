@@ -8,8 +8,6 @@ namespace MenuShellTerminal
 {
     class Program
     {
-        
-
         static void Main(string[] args)
         {
             var dataBase = new Database();

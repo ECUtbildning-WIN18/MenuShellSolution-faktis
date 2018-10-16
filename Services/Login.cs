@@ -6,7 +6,6 @@ namespace Services
 {
     public class Login
     {
-        
         public string TryLogin(string userName, string passWord)
         {
 
