@@ -1,18 +1,14 @@
 ﻿using Domain;
 using Services;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 
 namespace MenuShellTerminal.Views
 {
     public class LoginView : View
     {
-        
         public override View ViewIt()
         {
-           
             Console.Clear();
             Console.Title = "Login";
             Console.WriteLine("UserName: ");
@@ -50,7 +46,6 @@ namespace MenuShellTerminal.Views
                     break;
                 case ConsoleKey.N:
                     break;
-                    
             }
             return this;
         }

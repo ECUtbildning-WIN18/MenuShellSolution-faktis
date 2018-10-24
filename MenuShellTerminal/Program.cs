@@ -1,6 +1,4 @@
 ﻿using MenuShellTerminal.Views;
-using Services;
-using System;
 using Domain;
 
 
@@ -8,8 +6,6 @@ namespace MenuShellTerminal
 {
     class Program
     {
-        
-
         static void Main(string[] args)
         {
             var dataBase = new Database();
@@ -20,7 +16,6 @@ namespace MenuShellTerminal
             {
                 view = view.ViewIt();
             }
-
         }
     }
 }

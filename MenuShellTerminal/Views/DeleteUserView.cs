@@ -1,17 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Threading;
 using Services;
 
 namespace MenuShellTerminal.Views
 {
     class DeleteUserView : View
     {
-        private readonly string userToBeDeleted;
+        private readonly string userToBeDeleted = "";
+
         public DeleteUserView(string userName)
         {
             userToBeDeleted = userName;
         }
+
         public override View ViewIt()
         {
             Console.Clear();
@@ -25,14 +26,20 @@ namespace MenuShellTerminal.Views
                     delete.Delete(userToBeDeleted);
                     if(Globals.ActiveUser.UserType == Domain.UserType.SystemAdministrator)
                     {
+                        Console.Clear();
+                        Console.WriteLine($"User {userToBeDeleted} successfully deleted.");
+                        Thread.Sleep(2000);
                         return new SystemAdministratorView();
                     }
                     return new LoginView();
                 case ConsoleKey.N:
-                    return this;
+                    if (Globals.ActiveUser.UserType == Domain.UserType.SystemAdministrator)
+                    {
+                        return new ListUserView();
+                    }
+                    else return new CustomerView();      
             }
             return this;
         }
     }
-
 }

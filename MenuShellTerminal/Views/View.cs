@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MenuShellTerminal.Views
+﻿namespace MenuShellTerminal.Views
 {
     public abstract class View
     {
